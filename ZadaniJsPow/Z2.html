@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lista składników</title>
+</head>
+<body>
+
+<ul id="ingredients"></ul>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  
+  const ingredients = ["Potatoes", "Mushrooms", "Garlic", "Tomatoes", "Herbs", "Condiments"];
+
+  
+  const ingredientsList = document.getElementById("ingredients");
+
+  
+  ingredients.forEach(function(ingredient) {
+ 
+    const listItem = document.createElement("li");
+
+    
+    listItem.textContent = ingredient;
+
+ 
+    listItem.classList.add("item");
+
+   
+    ingredientsList.appendChild(listItem);
+  });
+});
+</script>
+
+</body>
+</html>

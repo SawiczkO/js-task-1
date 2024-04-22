@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Input to Span</title>
+</head>
+<body>
+
+<input type="text" id="name-input" placeholder="Please enter your name" />
+<h1>Hello, <span id="name-output">Anonymous</span>!</h1>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
+  const nameInput = document.getElementById("name-input");
+  const nameOutput = document.getElementById("name-output");
+
+
+  nameInput.addEventListener("input", function() {
+
+    if (nameInput.value.trim() !== "") {
+
+      nameOutput.textContent = nameInput.value;
+    } else {
+
+      nameOutput.textContent = "Anonymous";
+    }
+  });
+});
+</script>
+
+</body>
+</html>
